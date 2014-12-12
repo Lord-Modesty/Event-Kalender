@@ -1,40 +1,42 @@
-<div class="navbar navbar-inverse">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand">
-            <?php echo $_SESSION[ 'CurrentSite'] ?>
-        </a>
-    </div>
-    <div class="navbar-collapse collapse navbar-inverse-collapse">
+<div id="container">
 
-        <ul class="nav navbar-nav">
-            <li><a href="../index/index.php" data-toggle="tooltip" data-placement="bottom" title="Events">
-                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                </a>
-            </li>
+    <div id="canvas">
 
-            <li>
-                <a href="#" data-toggle="tooltip" data-placement="bottom" title="Archiv">
-                    <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
-                </a>
-            </li>
-        </ul>
-        <?php if ($_SESSION[ 'CurrentSite']=="Login" ) { } else{ echo '<ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <span class="glyphicon glyphicon-user" aria-hidden="true">  </span>
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="../login/login.php"><span class="glyphicon glyphicon-lock" aria-hidden="true"> Login</span>
-                       </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>'; } ?>
-    </div>
-</div>
+        <div id="nav">
+            <h2 id="title"></i> MENU</h2>
+            <ul id="toggle">
+                <li>
+                    <div class="active border">
+                        <span class="menu-icons fa fa-home"></span>  <a href="#">HOME</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <span class="menu-icons  fa fa-database"></span>  <a href="#">ARCHIV</a>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <span class="menu-icons  fa fa-user"></span>
+                        <a href="#">ADMIN</a><span class="the-btn fa fa-plus"></span>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <a href="#">LOGIN</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div>
+                        <span class="menu-icons  fa fa-info"></span>
+                        <a href="#">ABOUT</a> 
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="toggle-nav" id="bars"><i class="fa fa-bars"></i></a>
+   
